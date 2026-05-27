@@ -662,6 +662,13 @@ body {
   color: var(--ink-soft);
   margin-bottom: 22px;
 }
+.about-portrait {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
 .contact-block {
   margin-top: 48px;
   padding-top: 32px;

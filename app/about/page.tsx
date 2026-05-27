@@ -35,6 +35,11 @@ export default function AboutPage() {
             "Most nights, cooking is just the thing that needs to happen before
             eating. But sometimes it turns into something else."
           </blockquote>
+          <img
+            src="/img/me-portrait.png"
+            alt="Pallavi"
+            className="about-portrait"
+          />
         </aside>
 
         <div className="about-text">
