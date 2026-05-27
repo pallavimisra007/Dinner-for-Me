@@ -15,8 +15,31 @@ export default function HomePage() {
   const fourthRow = allRecipes.slice(9, 12);
   const fifthRow = allRecipes.slice(12, 15);
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Dinner for Me",
+    url: "https://dinnerforme.com/",
+    description:
+      "Cooking for one, accidental feasts, and the occasional unhinged culinary spirals.",
+    author: {
+      "@type": "Person",
+      name: "Pallavi Misra",
+      url: "https://dinnerforme.com/about/",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://dinnerforme.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <AdZone type="leaderboard" />
 
       {/* Hero */}

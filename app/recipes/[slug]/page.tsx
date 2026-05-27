@@ -39,8 +39,36 @@ export default async function RecipePage({
 
   const galleryImages = recipe.images.slice(0, 3);
 
+  const recipeSchema = {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    name: recipe.title,
+    description: recipe.teaser,
+    url: `https://dinnerforme.com/recipes/${recipe.slug}/`,
+    image: `https://dinnerforme.com${recipe.heroImage}`,
+    datePublished: recipe.publishedAt,
+    author: {
+      "@type": "Person",
+      name: "Pallavi Misra",
+      url: "https://dinnerforme.com/about/",
+    },
+    recipeCategory: recipe.categoryLabel,
+    recipeYield: recipe.serves,
+    recipeIngredient: recipe.ingredients,
+    recipeInstructions: recipe.method.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      text: step,
+    })),
+    keywords: [recipe.categoryLabel, "recipe", "dinner for me"].join(", "),
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeSchema) }}
+      />
       {/* Hero image */}
       <div className="recipe-hero-img">
         <img src={recipe.heroImage} alt={recipe.title} />
