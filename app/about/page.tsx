@@ -35,6 +35,7 @@ export default function AboutPage() {
             "Most nights, cooking is just the thing that needs to happen before
             eating. But sometimes it turns into something else."
           </blockquote>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/img/me-portrait.png"
             alt="Pallavi"
