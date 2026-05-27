@@ -37,6 +37,12 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Dinner for Me",
     type: "website",
+    images: [
+      {
+        url: "https://dinnerforme.com/img/dinner-for-me-hero.png",
+        alt: "Dinner for Me",
+      },
+    ],
   },
   other: {
     "google-adsense-account": "ca-pub-3655019220755858",

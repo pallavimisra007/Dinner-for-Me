@@ -21,6 +21,14 @@ export async function generateMetadata({
   return {
     title: recipe.title,
     description: recipe.teaser,
+    openGraph: {
+      images: [
+        {
+          url: `https://dinnerforme.com${recipe.heroImage}`,
+          alt: recipe.title,
+        },
+      ],
+    },
   };
 }
 

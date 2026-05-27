@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
+  openGraph: {
+    images: [
+      {
+        url: "https://dinnerforme.com/img/me-portrait.png",
+        alt: "Pallavi Misra — Dinner for Me",
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {
