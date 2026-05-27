@@ -47,6 +47,14 @@ export default async function RecipePage({
 
   const galleryImages = recipe.images.slice(0, 3);
 
+  // Convert image filename to readable alt text e.g. /img/red-bell-peppers.png → "Red bell peppers"
+  function imgAlt(src: string): string {
+    return (src.split("/").pop() ?? src)
+      .replace(/\.[^.]+$/, "")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+  }
+
   const recipeSchema = {
     "@context": "https://schema.org",
     "@type": "Recipe",
@@ -71,11 +79,40 @@ export default async function RecipePage({
     keywords: [recipe.categoryLabel, "recipe", "dinner for me"].join(", "),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://dinnerforme.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: recipe.categoryLabel,
+        item: `https://dinnerforme.com/category/${recipe.category}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: recipe.title,
+        item: `https://dinnerforme.com/recipes/${recipe.slug}/`,
+      },
+    ],
+  };
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero image */}
       <div className="recipe-hero-img">
@@ -168,7 +205,7 @@ export default async function RecipePage({
         {galleryImages.length > 1 && (
           <div className={`recipe-gallery${galleryImages.length === 2 ? " two" : ""}`}>
             {galleryImages.map((img, i) => (
-              <img key={i} src={img} alt={`${recipe.title} ${i + 1}`} />
+              <img key={i} src={img} alt={imgAlt(img)} />
             ))}
           </div>
         )}

@@ -12,9 +12,30 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Pallavi Misra",
+  url: "https://dinnerforme.com/about/",
+  image: "https://dinnerforme.com/img/me-portrait.png",
+  description:
+    "Home cook based in Singapore writing about cooking for one, adapted recipes, and the occasional unhinged culinary spiral.",
+  knowsAbout: [
+    "Indian cuisine",
+    "Levantine food",
+    "Indonesian sambals",
+    "Home cooking",
+    "Recipe development",
+  ],
+};
+
 export default function AboutPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <div className="about-hero">
         <svg
           className="about-wc"
