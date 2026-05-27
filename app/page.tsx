@@ -62,6 +62,9 @@ export default function HomePage() {
       {/* Featured carousel */}
       <Carousel recipes={latest} />
 
+      {/* Email signup strip */}
+      <EmailSignup variant="strip" />
+
       {/* Recipe grid */}
       <section className="grid-section">
         <div className="grid-header">
@@ -96,8 +99,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Email signup strip */}
-      <EmailSignup variant="strip" />
     </main>
   );
 }
