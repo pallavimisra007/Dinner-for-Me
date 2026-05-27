@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Allow AI answer/search crawlers (GEO/AEO)
+# These power AI Overviews, ChatGPT search, Perplexity etc.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://dinnerforme.com/sitemap.xml
