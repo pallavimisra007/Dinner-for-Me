@@ -11,8 +11,7 @@
   "dependencies": {
     "next": "^15.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "posthog-js": "^1.96.1"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

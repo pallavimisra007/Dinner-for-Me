@@ -1,17 +1,13 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
 type Variant = "strip" | "recipe" | "footer";
 
-interface Props {
-  variant: Variant;
-}
-
-export default function EmailSignup({ variant }: Props) {
-  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">(
-    "idle"
-  );
+export default function EmailSignup({ variant }: { variant: Variant }) {
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const router = useRouter();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,21 +22,13 @@ export default function EmailSignup({ variant }: Props) {
         body: JSON.stringify({ email }),
       });
       if (res.ok) {
-        setStatus("done");
+        router.push("/subscribed");
       } else {
         setStatus("error");
       }
     } catch {
       setStatus("error");
     }
-  }
-
-  if (status === "done") {
-    return (
-      <p className="sub-success">
-        {"You're in. I'll let you know when there's something new."}
-      </p>
-    );
   }
 
   if (variant === "strip") {
@@ -67,7 +55,7 @@ export default function EmailSignup({ variant }: Props) {
             New recipes in <em>your inbox</em>
           </h2>
           <p className="signup-sub">
-            Subscribe and I'll let you know when a new recipe goes up.
+            Subscribe and I&apos;ll let you know when a new recipe goes up.
           </p>
           <form className="signup-form" onSubmit={handleSubmit}>
             <input
@@ -95,7 +83,7 @@ export default function EmailSignup({ variant }: Props) {
       <div className="recipe-signup">
         <h3 className="recipe-signup-title">New recipes in your inbox</h3>
         <p className="recipe-signup-sub">
-          Subscribe and I'll let you know when a new recipe goes up.
+          Subscribe and I&apos;ll let you know when a new recipe goes up.
         </p>
         <form className="recipe-signup-form" onSubmit={handleSubmit}>
           <input
@@ -119,9 +107,7 @@ export default function EmailSignup({ variant }: Props) {
   return (
     <div className="footer-signup">
       <p className="footer-signup-lbl">Newsletter</p>
-      <p className="footer-signup-sub">
-        New recipes in your inbox.
-      </p>
+      <p className="footer-signup-sub">New recipes in your inbox.</p>
       <form className="footer-signup-form" onSubmit={handleSubmit}>
         <input
           name="email"
