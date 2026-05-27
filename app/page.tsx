@@ -1,5 +1,6 @@
-import { getLatestRecipes } from "@/data/recipes";
-import recipes from "@/data/recipes";
+import Link from "next/link";
+import { getLatestRecipes, getLatestByCategory } from "@/data/recipes";
+import { CATEGORY_META } from "@/data/categories";
 import Carousel from "@/components/Carousel";
 import RecipeCard from "@/components/RecipeCard";
 import EmailSignup from "@/components/EmailSignup";
@@ -7,13 +8,6 @@ import AdZone from "@/components/AdZone";
 
 export default function HomePage() {
   const latest = getLatestRecipes(5);
-  const allRecipes = recipes;
-
-  const firstRow = allRecipes.slice(0, 3);
-  const secondRow = allRecipes.slice(3, 6);
-  const thirdRow = allRecipes.slice(6, 9);
-  const fourthRow = allRecipes.slice(9, 12);
-  const fifthRow = allRecipes.slice(12, 15);
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -88,40 +82,39 @@ export default function HomePage() {
       {/* Email signup strip */}
       <EmailSignup variant="strip" />
 
-      {/* Recipe grid */}
-      <section className="grid-section">
-        <div className="grid-header">
-          <h2 className="grid-title">All Recipes</h2>
-        </div>
-        <div className="recipe-grid">
-          {firstRow.map((r) => (
-            <RecipeCard key={r.slug} recipe={r} />
-          ))}
-          {secondRow.length > 0 && secondRow.map((r) => (
-            <RecipeCard key={r.slug} recipe={r} />
-          ))}
-          {secondRow.length > 0 && (
-            <div className="ad-row">
-              <AdZone type="fullrow" />
+      {/* Category sections */}
+      <section className="cat-sections">
+        {CATEGORY_META.map((cat, index) => {
+          const catRecipes = getLatestByCategory(cat.slug, 2);
+          return (
+            <div key={cat.slug} className="cat-section">
+              <div className="cat-header">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={cat.image} alt={cat.label} className="cat-thumb" />
+                <div className="cat-info">
+                  <h2 className="cat-name">{cat.label}</h2>
+                  <p className="cat-desc">{cat.description}</p>
+                  <Link href={cat.href} className="cat-link">
+                    All {cat.label} →
+                  </Link>
+                </div>
+              </div>
+              {catRecipes.length > 0 && (
+                <div className="cat-cards">
+                  {catRecipes.map((r) => (
+                    <RecipeCard key={r.slug} recipe={r} />
+                  ))}
+                </div>
+              )}
+              {index === 1 && (
+                <div className="cat-ad">
+                  <AdZone type="fullrow" />
+                </div>
+              )}
             </div>
-          )}
-          {thirdRow.map((r) => (
-            <RecipeCard key={r.slug} recipe={r} />
-          ))}
-          {fourthRow.map((r) => (
-            <RecipeCard key={r.slug} recipe={r} />
-          ))}
-          {fourthRow.length > 0 && (
-            <div className="ad-row">
-              <AdZone type="fullrow" />
-            </div>
-          )}
-          {fifthRow.map((r) => (
-            <RecipeCard key={r.slug} recipe={r} />
-          ))}
-        </div>
+          );
+        })}
       </section>
-
     </main>
   );
 }

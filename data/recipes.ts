@@ -1271,6 +1271,13 @@ export function getRecipesByCategory(category: Category): Recipe[] {
   return recipes.filter((r) => r.category === category);
 }
 
+export function getLatestByCategory(category: Category, count = 2): Recipe[] {
+  return [...recipes]
+    .filter((r) => r.category === category)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, count);
+}
+
 export function getLatestRecipes(count = 5): Recipe[] {
   return [...recipes]
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
