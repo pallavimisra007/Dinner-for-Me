@@ -60,19 +60,29 @@ export default function HomePage() {
           <ellipse cx="720" cy="540" rx="200" ry="44" fill="#F0B828" opacity="0.18" filter="url(#f3)" />
         </svg>
         <div className="hero-inner">
-          <p className="hero-eyebrow">
-            A personal recipe collection from a Singapore kitchen
-          </p>
-          <h1 className="hero-title">
-            Dinner
-            <br />
-            <em>for Me</em>
-          </h1>
-          <div className="hero-rule" />
-          <p className="hero-tagline">
-            Cooking for one, accidental feasts, and the occasional unhinged
-            culinary spirals.
-          </p>
+          <div className="hero-text">
+            <p className="hero-eyebrow">
+              A personal recipe collection from a Singapore kitchen
+            </p>
+            <h1 className="hero-title">
+              Dinner
+              <br />
+              <em>for Me</em>
+            </h1>
+            <div className="hero-rule" />
+            <p className="hero-tagline">
+              Cooking for one, accidental feasts, and the occasional unhinged
+              culinary spirals.
+            </p>
+          </div>
+          <div className="hero-brand">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/img/dinner-for-me-hero.png"
+              alt="Dinner for Me"
+              className="hero-brand-img"
+            />
+          </div>
         </div>
       </header>
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import SearchModal from "./SearchModal";
 
 const links = [
   { href: "/category/things-in-jars/", label: "Things in Jars" },
@@ -13,45 +14,63 @@ const links = [
 ];
 
 export default function Nav() {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
-    <nav className="nav">
-      <Link href="/" className="nav-logo">
-        Dinner for Me
-      </Link>
+    <>
+      <nav className="nav">
+        <Link href="/" className="nav-logo">
+          Dinner for Me
+        </Link>
 
-      <ul className="nav-links">
-        {links.map((l) => (
-          <li key={l.href}>
-            <Link href={l.href}>{l.label}</Link>
-          </li>
-        ))}
-      </ul>
-
-      <button
-        className="nav-hamburger"
-        aria-label="Toggle menu"
-        onClick={() => setOpen((v) => !v)}
-      >
-        <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
-          <rect y="0" width="22" height="2" fill="currentColor" />
-          <rect y="7" width="22" height="2" fill="currentColor" />
-          <rect y="14" width="22" height="2" fill="currentColor" />
-        </svg>
-      </button>
-
-      {open && (
-        <ul className="nav-mobile open">
+        <ul className="nav-links">
           {links.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} onClick={() => setOpen(false)}>
-                {l.label}
-              </Link>
+              <Link href={l.href}>{l.label}</Link>
             </li>
           ))}
         </ul>
-      )}
-    </nav>
+
+        <div className="nav-actions">
+          <button
+            className="nav-search-btn"
+            aria-label="Search recipes"
+            onClick={() => setSearchOpen(true)}
+          >
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.6" />
+              <path d="M14 14l4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+          </button>
+
+          <button
+            className="nav-hamburger"
+            aria-label="Toggle menu"
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+              <rect y="0" width="22" height="2" fill="currentColor" />
+              <rect y="7" width="22" height="2" fill="currentColor" />
+              <rect y="14" width="22" height="2" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+
+        {menuOpen && (
+          <ul className="nav-mobile open">
+            {links.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} onClick={() => setMenuOpen(false)}>
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </nav>
+
+      {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
+    </>
   );
 }
