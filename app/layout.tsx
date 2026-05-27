@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     siteName: "Dinner for Me",
     type: "website",
   },
+  other: {
+    "google-adsense-account": "ca-pub-3655019220755858",
+  },
 };
 
 export default function RootLayout({
