@@ -74,54 +74,59 @@ export default function AboutPage() {
 
         <div className="about-text">
           <p>
-            I started writing these recipes down because I kept forgetting them.
-            Not just the quantities. The things that actually mattered. The
-            moment I realised the pomegranate molasses needed to be doubled. The
-            afternoon a sambal turned out exactly right and I had no idea what
-            I had done differently. The first time a chutney worked and I stood
-            in my kitchen eating it off the spoon.
+            Tired of recipes that assume you&rsquo;re cooking for a family of
+            six. Tired of making something delicious and then realising you now
+            have leftovers for the next four days, except you&rsquo;re barely
+            home because life in Singapore is busy and everyone has work,
+            friends, obligations, events, dinners, plans. And honestly?
+            Sometimes I just want one really good meal.
           </p>
           <p>
-            Most of these recipes are things I make for myself. I live in
-            Singapore, I cook in a small kitchen, and I mostly eat alone, which
-            is not a complaint. Sometimes that means figuring out what to do
-            with leftovers and trying not to waste food. Sometimes it means
-            making enough for exactly one meal and one slightly exciting lunch
-            the next day. And sometimes it means spending an entire afternoon
-            making a completely unnecessary feast because, honestly, sometimes
-            that's the mood. Cooking for one is its own particular kind of
-            freedom. You can make the same thing three nights running because
-            you like it. You can have just a bowl of something and call it
-            dinner. You can go on completely unhinged ingredient spirals
-            (walnut-pomegranate, tamarind-green chilli, kumquat-everything)
-            with no one to negotiate with.
+            I love to cook. I love feeding my friends. I also love cooking for
+            myself. Cooking for one is its own particular kind of freedom.
+            Sometimes it means making exactly enough for dinner and one slightly
+            exciting lunch the next day. Sometimes it means spending an entire
+            afternoon making a completely unnecessary feast because, well,
+            sometimes that is the mood.
           </p>
           <p>
-            I grew up eating Indian food at home, with a mother who is an
-            excellent cook, and a fairly chaotic mix of everything else
-            everywhere else. Singapore helped with that. You cannot live here
-            and not end up eating and cooking across cuisines. So the recipes here are a mix:
-            Levantine dips, Indonesian sambals, a Yemeni hot sauce, Indian
-            chutneys, soups, roasted things, and whatever else I made that
-            seemed worth remembering.
+            Over the years, I&rsquo;ve learnt how to scale recipes down
+            properly. Chicken for one. Soup for one. Kebabs for one. Biryani
+            for one in a rice cooker, which is admittedly a little unhinged
+            because biryani is meant to be shared, but here we are.
           </p>
           <p>
-            Some of these are adapted from cooks and writers I admire. Yotam
-            Ottolenghi sent me down several very enjoyable rabbit holes. Some
-            are cobbled together from things I cooked until they became
-            versions I preferred. A few are entirely my own, born out of
-            curiosity, stubbornness, cravings, travel memories, or a long
-            conversation with ChatGPT while trying to reverse-engineer something
-            I tasted somewhere. I write about what I was thinking, what didn't
-            work the first time, and what I'd do differently. Not because
-            that's information you strictly need, but because that's what I
-            actually want to read when I'm looking at a recipe.
+            I also hate excessive leftovers and unnecessary clean-up. So a lot
+            of the recipes here are designed around real life. Small kitchens.
+            Stocked pantries. Minimal washing up unless I&rsquo;ve decided to
+            disappear into a full cooking spiral for the afternoon.
           </p>
           <p>
-            The recipes here are not meant to be perfect. They're meant to be
-            cooked. Adjusted. Improvised. Scribbled on. If you make something
-            from here and it went a different way (or went brilliantly), I'd
-            genuinely love to hear about it.
+            I grew up eating Indian food at home and my mother is an exceptional
+            cook. But I also live in Singapore, which means eating across
+            cultures constantly. You can&rsquo;t really live here and not end up
+            cooking that way too. So the recipes here wander everywhere. Indian.
+            Middle Eastern. Southeast Asian. European. Sometimes all at once.
+          </p>
+          <p>
+            Some recipes are adapted from cooks I admire like Yotam Ottolenghi
+            and Nigella Lawson. Some came from holidays where I got obsessed
+            with remembering a particular taste. Some exist because I had random
+            things in the fridge that needed clearing before they died quietly
+            in the vegetable drawer. And many of them started with me having
+            lengthy, slightly chaotic discussions with ChatGPT trying to reverse
+            engineer a craving or flavour profile in my head.
+          </p>
+          <p>
+            The recipes here are not meant to be perfect. They&rsquo;re meant
+            to be cooked, adjusted, improvised, scribbled on, and adapted
+            depending on what you already have at home. Most importantly,
+            they&rsquo;re meant to work for actual life.
+          </p>
+          <p>
+            And if you make something from here and it goes gloriously right,
+            slightly wrong, or completely off the rails, I&rsquo;d genuinely
+            love to hear about it.
           </p>
 
           <div className="contact-block">
