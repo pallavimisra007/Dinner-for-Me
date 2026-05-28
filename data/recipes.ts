@@ -1085,6 +1085,8 @@ const recipes: Recipe[] = [
       "Small pinch Kashmiri chilli powder",
       "Tiny pinch dried oregano (optional)",
       "1–2 tsp balsamic vinegar",
+      "At least ½ cup pasta water",
+      "Optional finishing: lemon zest, parsley or basil, parmesan / pecorino / feta / goat cheese",
     ],
     method: [
       "Heat the oven to 220°C. Put the sliced chorizo, mushrooms, tomatoes, and garlic onto a sheet pan. Drizzle lightly with olive oil — don't go overboard because the chorizo releases a lot of fat while roasting.",
