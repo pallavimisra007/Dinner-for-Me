@@ -1267,16 +1267,18 @@ const recipes: Recipe[] = [
     categoryLabel: "Starters & Small Things",
     tagClass: "tag-starters",
     serves: "1 hungry person, or 2 as a snack",
-    energyLevel: "Almost none.",
+    energyLevel: "Almost none. Basically a confidence exercise with a toaster oven.",
     teaser: "Harissa, cheese, tomatoes, sourdough. Four ingredients that do all the heavy lifting. Barely a recipe, but one you'll find yourself making constantly.",
     story: [
       "This is barely a recipe. Honestly, it exists because I usually have a jar of harissa somewhere in the fridge, a loaf of sourdough that probably needs using, and tomatoes that are sitting around waiting for a purpose. And sometimes that's all you need. A couple of slices of bread. Some cheese. A tomato. A spoonful of harissa. Done.",
       "I make this a lot as a snack because it takes almost no effort. You slice the bread, spread the harissa, add some cheese, pile on the tomatoes and throw the whole thing into the oven. By the time it's done, you've also made yourself a coffee. Perfect timing.",
       "The tomatoes soften and caramelise slightly. The cheese melts. The harissa warms up and becomes deeper and richer and somehow tastes even better than it did straight from the jar. And the thing I like most about it is that it's filling without feeling like you've committed to making an actual meal. A couple of slices and a good coffee and suddenly the afternoon seems much more manageable.",
       "People always want to add things. Mushrooms. Onions. Whatever else is in the fridge. You can. But honestly? Tomatoes, harissa and cheese are doing all the heavy lifting already.",
+      "The real trick, if there is one, is not being precious about the cheese. Mozzarella for stretch. Cheddar for sharpness. Whatever is sitting in the fridge near its use-by date. The harissa will carry it regardless.",
     ],
     whyItWorks: [
-      "Harissa brings heat, acidity and spice all at once. The tomatoes soften and concentrate as they cook, becoming slightly sweet and jammy around the edges. The cheese melts into everything and balances the spice. And good sourdough provides enough structure to stay crisp underneath while supporting all the toppings.",
+      "Harissa brings heat, acidity and spice all at once. The tomatoes soften and concentrate as they cook, becoming slightly sweet and jammy around the edges. Together they create a sauce that didn't exist before the oven got involved.",
+      "Good sourdough is the structural decision here — it stays crisp underneath while the cheese melts into everything and blunts the harissa's sharpness. The four ingredients are doing exactly the right jobs and there isn't a fifth one worth adding.",
     ],
     ingredients: [
       "2 slices sourdough bread",
@@ -1398,6 +1400,7 @@ const recipes: Recipe[] = [
       "The inspiration came from a restaurant that served the most gorgeous blue potato parathas. The potato itself peeked through the dough in little purple streaks and looked absolutely stunning. Blue potatoes aren't exactly a staple ingredient in my kitchen. But one day I wandered into Cold Storage and found a mixed bag of New Zealand potatoes. Hidden among the regular potatoes were a few blue ones. Naturally, they came home with me.",
       "The result was a surprisingly successful experiment. The dough worked beautifully. The filling ratio was exactly what I wanted. The spice crust turned out far better than expected. The only thing I got wrong was the seasoning. I forgot the salt. And potatoes, as it turns out, are not shy about informing you when you've forgotten the salt.",
       "So consider this the corrected version. The version where the potatoes finally get the seasoning they deserve.",
+      "There's also the dough. The onion-ginger-coriander paste adds so much moisture that the first time I made it, I'd already added the paste and thought, this feels fine, and then ten seconds later it was not fine. Sticky. Loose. Slightly tragic. The correct approach is to add the paste, then wait, then decide. It does not need extra water most of the time.",
     ],
     whyItWorks: [
       "The filling-to-dough ratio is intentionally generous, which gives you thin parathas with plenty of potato in every bite. The onion, ginger and coriander dough adds flavour directly into the bread rather than relying entirely on the filling.",
@@ -1445,7 +1448,7 @@ const recipes: Recipe[] = [
     sgVersion: [
       "This recipe only exists because I accidentally found blue potatoes in a mixed bag at Cold Storage. If you can find blue potatoes, they're beautiful. If you can't, don't worry about it. Regular potatoes work perfectly. The blue potatoes create lovely streaks of colour through the dough, but they're not dramatically different in flavour.",
       "The spice crust, on the other hand, is absolutely worth making. I originally thought it might be a gimmick. It wasn't. The kasuri methi, cracked coriander and toasted cumin add a layer of flavour that makes the whole thing feel far more interesting than a standard potato paratha.",
-      "Important note on the dough: the onion-coriander-ginger paste contains far more water than you expect. Add water slowly, stop and knead before adding more, and wait 30 seconds to reassess. It's surprisingly easy to over-hydrate a 70g batch of dough.",
+      "The one thing that will catch you is the dough moisture. The paste has far more water than it looks like it does, and a 70g batch is very small. I ended up with something approaching paste the first time because I didn't wait to see what the onion mixture was doing before reaching for the water jug. Add the paste, knead, pause. It almost certainly doesn't need extra water.",
     ],
     notes: [
       "Blue potatoes are beautiful but optional.",
@@ -1607,7 +1610,7 @@ const recipes: Recipe[] = [
   },
   {
     slug: "sheetpan-kefta-rolls",
-    title: "Lebanese-Style Lamb Kefta with Harissa Tahini, Sumac Onions & Blistered Tomatoes",
+    title: "Lamb Kefta Wraps",
     category: "mains",
     categoryLabel: "The Main Event",
     tagClass: "tag-mains",
@@ -1623,6 +1626,7 @@ const recipes: Recipe[] = [
     ],
     whyItWorks: [
       "The lamb is heavily flavoured with herbs but lightly spiced, allowing the meat itself to remain the star. The sumac onions bring brightness and acidity. The harissa tahini adds richness, heat and creaminess. The blistered tomatoes provide sweetness and balance. And the warm flatbread ties everything together into something that feels far more elaborate than the amount of effort involved.",
+      "The flatbread is important precisely because it's imperfect — slightly uneven, blistered in places, soft enough to roll without cracking. A perfect wrap from a packet would change the whole feeling of the dish.",
     ],
     ingredients: [
       "— Lamb Kefta —",
@@ -1671,10 +1675,10 @@ const recipes: Recipe[] = [
     sgVersion: [
       "The flatbread is the only part that requires a little attention. The biggest challenge is not adding too much water. I've listed 20–40ml because flour is unpredictable and adding too much water all at once is a very quick way to discover you've accidentally made paste instead of dough. Start small. Mix. Wait. Then decide whether it needs more.",
       "The rest is remarkably forgiving. The lamb cooks quickly. The onions practically make themselves. The tahini takes about two minutes. And somehow all those simple components come together into something that feels like proper café food.",
-      "For a more Lebanese version, use allspice instead of cinnamon, add fresh mint to the onions, and finish with pomegranate molasses.",
     ],
     notes: [
-      "If you want to go more Turkish, replace paprika with pul biber and add a spoonful of yogurt to the tahini.",
+      "For a more Lebanese feel: swap cinnamon for allspice, add fresh mint to the sumac onions, finish with pomegranate molasses.",
+      "For more Turkish: replace paprika with pul biber and add a spoonful of yogurt to the tahini.",
       "For more spice, increase the harissa and add chilli flakes to the lamb.",
       "Optional but excellent: drizzle of pomegranate molasses before serving.",
     ],
