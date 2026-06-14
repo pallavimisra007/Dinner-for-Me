@@ -160,6 +160,24 @@ export default async function RecipePage({
 
         <AdZone type="inline" />
 
+        {/* See also */}
+        {recipe.relatedRecipes && recipe.relatedRecipes.length > 0 && (() => {
+          const seeAlso = recipe.relatedRecipes!
+            .map((s) => recipes.find((r) => r.slug === s))
+            .filter(Boolean) as typeof recipes;
+          return seeAlso.length > 0 ? (
+            <p className="see-also">
+              Also:{" "}
+              {seeAlso.map((r, i) => (
+                <span key={r.slug}>
+                  {i > 0 && ", "}
+                  <Link href={`/recipes/${r.slug}/`}>{r.title}</Link>
+                </span>
+              ))}
+            </p>
+          ) : null;
+        })()}
+
         {/* Recipe card: ingredients + method */}
         <div className="section-sep">The Recipe</div>
         <div className="recipe-cols">
