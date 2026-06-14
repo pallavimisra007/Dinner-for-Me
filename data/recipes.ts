@@ -147,6 +147,7 @@ const recipes: Recipe[] = [
     heroImage: "/img/sambal-hijau.png",
     images: ["/img/sambal-hijau.png", "/img/green-grape-tomatoes.png", "/img/green-chili.png"],
     publishedAt: "2024-02-10",
+    relatedRecipes: ["sambal-belado"],
   },
   {
     slug: "sambal-belado",
@@ -158,7 +159,7 @@ const recipes: Recipe[] = [
     energyLevel: "Moderate effort. Slightly chaotic if you underestimate the chilli fumes.",
     teaser: "Deeper, warmer, more comforting than sambal hijau. Makes you immediately want more rice. The sambal I bottled as Lunar New Year gifts.",
     story: [
-      "Remember that spa in Batam I talked about in the sambal hijau recipe? Yeah. This is another one of the sambals we completely fell in love with there.",
+      "Remember that spa in Batam I talked about in the [[sambal hijau|/recipes/sambal-hijau/]] recipe? Yeah. This is another one of the sambals we completely fell in love with there.",
       "While sambal hijau felt fresh and green and bright, sambal belado was deeper, warmer, and somehow more comforting. Still vibrant, still punchy, but with this rich slow-cooked chilli sweetness that makes you immediately want more rice.",
       "One thing I really liked about it was that it didn't rely on shrimp paste or dried seafood flavours, which also meant one of my friends could actually eat it safely because she's allergic to shellfish. Once you start paying attention, you realise how many sambals quietly contain belacan or dried shrimp somewhere in the background.",
       "Eventually I started making it at home and somehow it became one of those recipes that turned into gifts. I ended up bottling jars of it for friends during Lunar New Year because sambal feels strangely symbolic to me. Warmth. Passion. Generosity. Abundance. Love expressed through spice, effort, and tiny jars of homemade things.",
@@ -204,6 +205,7 @@ const recipes: Recipe[] = [
     heroImage: "/img/sambal-belado.png",
     images: ["/img/sambal-belado.png", "/img/cherry-tomatoes.png", "/img/red-chili.png"],
     publishedAt: "2024-02-20",
+    relatedRecipes: ["sambal-hijau"],
   },
   {
     slug: "schug",
@@ -393,6 +395,7 @@ const recipes: Recipe[] = [
     heroImage: "/img/harissa.png",
     images: ["/img/harissa.png", "/img/red-chili.png", "/img/cumin-coriander.png"],
     publishedAt: "2024-04-01",
+    relatedRecipes: ["harissa-tomato-cheese-crostini", "sheetpan-kefta-rolls"],
   },
   {
     slug: "rose-harissa",
@@ -455,7 +458,7 @@ const recipes: Recipe[] = [
     ],
     howIAteIt: [
       "Spread on toast with labneh, mixed into yogurt, rubbed onto grilled chicken, stirred into roasted vegetables, with eggs, with feta, in grain bowls.",
-      "Honestly though, regular harissa still wins for me most days.",
+      "Honestly though, [[regular harissa|/recipes/harissa-paste/]] still wins for me most days.",
     ],
     whatIDoDifferently: [
       "I might try adding slightly more rose petals and less rose water next time for a softer floral flavour. Or maybe experiment with pomegranate molasses somewhere in the mix because that feels like it belongs in this flavour universe.",
@@ -1270,7 +1273,7 @@ const recipes: Recipe[] = [
     energyLevel: "Almost none. Basically a confidence exercise with a toaster oven.",
     teaser: "Harissa, cheese, tomatoes, sourdough. Four ingredients that do all the heavy lifting. Barely a recipe, but one you'll find yourself making constantly.",
     story: [
-      "This is barely a recipe. Honestly, it exists because I usually have a jar of harissa somewhere in the fridge, a loaf of sourdough that probably needs using, and tomatoes that are sitting around waiting for a purpose. And sometimes that's all you need. A couple of slices of bread. Some cheese. A tomato. A spoonful of harissa. Done.",
+      "This is barely a recipe. Honestly, it exists because I usually have a jar of [[harissa|/recipes/harissa-paste/]] somewhere in the fridge, a loaf of sourdough that probably needs using, and tomatoes that are sitting around waiting for a purpose. And sometimes that's all you need. A couple of slices of bread. Some cheese. A tomato. A spoonful of harissa. Done.",
       "I make this a lot as a snack because it takes almost no effort. You slice the bread, spread the harissa, add some cheese, pile on the tomatoes and throw the whole thing into the oven. By the time it's done, you've also made yourself a coffee. Perfect timing.",
       "The tomatoes soften and caramelise slightly. The cheese melts. The harissa warms up and becomes deeper and richer and somehow tastes even better than it did straight from the jar. And the thing I like most about it is that it's filling without feeling like you've committed to making an actual meal. A couple of slices and a good coffee and suddenly the afternoon seems much more manageable.",
       "People always want to add things. Mushrooms. Onions. Whatever else is in the fridge. You can. But honestly? Tomatoes, harissa and cheese are doing all the heavy lifting already.",
@@ -1282,7 +1285,7 @@ const recipes: Recipe[] = [
     ],
     ingredients: [
       "2 slices sourdough bread",
-      "2–3 tsp harissa",
+      "2–3 tsp [[harissa|/recipes/harissa-paste/]]",
       "40–60g cheese, sliced or grated",
       "1 small tomato, thinly sliced, or a handful of cherry tomatoes, sliced",
       "Pinch dried oregano",
@@ -1315,6 +1318,7 @@ const recipes: Recipe[] = [
     heroImage: "/img/harissa-tomato-cheese-crostini.png",
     images: ["/img/harissa-tomato-cheese-crostini.png"],
     publishedAt: "2025-01-10",
+    relatedRecipes: ["harissa-paste"],
   },
   {
     slug: "roasted-chicory-salad",
@@ -1517,7 +1521,7 @@ const recipes: Recipe[] = [
       "While the keema cooks, blend together the coriander, mint, frozen spinach and yogurt until mostly smooth.",
       "After 1½ hours, check the keema. You should see the oil beginning to separate from the meat. Stir in the green slurry, frozen peas and crushed kasuri methi. Continue cooking for another 30 minutes.",
       "Taste and adjust seasoning if needed. If the keema is looser than you'd like, transfer to a frying pan and reduce over medium heat for a few minutes.",
-      "Serve with rice, toast, pav, roti or simply on its own. Lemon wedges belong on the table, not in the pot.",
+      "Serve with rice, toast, pav, roti, or [[daqoos|/recipes/daqoos/]]. Lemon wedges belong on the table, not in the pot.",
     ],
     sgVersion: [
       "The biggest challenge with this recipe is not actually making the keema. It's deciding what to eat it with. If your rice cooker is busy making keema, then it's not making rice. This is one of those moments where bread suddenly becomes very useful. Toast works. Store-bought roti prata works. Pav works. A spoon works.",
@@ -1550,7 +1554,7 @@ const recipes: Recipe[] = [
     energyLevel: "Medium. Easier than most biryanis.",
     teaser: "If you've already made the Rice Cooker Green Keema, you're most of the way here. Caramelised onions, saffron water, partially cooked basmati, and patience. Don't peek.",
     story: [
-      "If you've already made the Rice Cooker Green Keema, you're most of the way to making biryani. Which is both good news and dangerous news. Good news because most of the flavour is already there. Dangerous news because once you realise how little extra effort is required, you'll start turning leftovers into biryani on a fairly regular basis.",
+      "If you've already made the [[Rice Cooker Green Keema|/recipes/rice-cooker-green-keema/]], you're most of the way to making biryani. Which is both good news and dangerous news. Good news because most of the flavour is already there. Dangerous news because once you realise how little extra effort is required, you'll start turning leftovers into biryani on a fairly regular basis.",
       "This recipe wasn't planned. It happened because I had a batch of green keema sitting in the fridge and thought, 'Well, I could just eat this again.' And then immediately thought, 'Or I could make biryani.' The second thought won.",
       "Thankfully, this is not one of those weekend-project biryanis involving multiple marinades, several pots and a detailed spreadsheet. The keema has already done the heavy lifting. All you're really doing now is making the rice, caramelising some onions and layering everything together.",
       "The only thing that feels slightly wrong the first time you do it is the rice. You're deliberately undercooking it. Don't fix it. Don't add more water. Don't keep cooking because you're worried the rice isn't done. The rice is supposed to finish cooking during the dum stage. If you fully cook the rice beforehand, you'll end up with something much closer to keema pulao. Still delicious. Just not biryani.",
@@ -1584,7 +1588,7 @@ const recipes: Recipe[] = [
       "Place the green keema into a heavy-bottomed or cast-iron pot. Scatter over the caramelised onions. Add the partially cooked rice. Sprinkle over the chopped coriander. Drizzle over the saffron water (use less if the keema is already quite wet, more if it feels dry).",
       "Cover with a tight-fitting lid. Place a heavy weight on top. Cook over medium-high heat for 10 minutes. Reduce the heat and cook for another 5 minutes. Turn off the heat.",
       "Leave completely undisturbed for 20 minutes. No peeking.",
-      "Fluff gently with a fork. Serve with raita, daqoos and lemon wedges.",
+      "Fluff gently with a fork. Serve with raita, [[daqoos|/recipes/daqoos/]] and lemon wedges.",
     ],
     sgVersion: [
       "This recipe exists because sometimes leftovers deserve better things. The keema is already excellent on its own. You can absolutely eat it with rice, roti, toast or a spoon. But if you're cooking for two, or you just want something that feels a little more special, the biryani route is worth taking.",
@@ -1643,7 +1647,7 @@ const recipes: Recipe[] = [
       "Pinch cinnamon or allspice",
       "— Harissa Tahini —",
       "1 tbsp tahini",
-      "1 tsp harissa",
+      "1 tsp [[harissa|/recipes/harissa-paste/]]",
       "1 small garlic clove, grated",
       "Juice of ½ lemon",
       "Pinch salt",

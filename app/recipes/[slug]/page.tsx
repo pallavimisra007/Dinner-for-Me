@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import recipes, { getRecipeBySlug, getLatestRecipes } from "@/data/recipes";
+import { renderText } from "@/lib/renderText";
 import EmailSignup from "@/components/EmailSignup";
 import AdZone from "@/components/AdZone";
 import RecipeCard from "@/components/RecipeCard";
@@ -154,7 +155,7 @@ export default async function RecipePage({
         {/* Story */}
         <div className="story-intro">
           {recipe.story.map((para, i) => (
-            <p key={i}>{para}</p>
+            <p key={i}>{renderText(para)}</p>
           ))}
         </div>
 
@@ -185,7 +186,7 @@ export default async function RecipePage({
             <p className="col-lbl">Ingredients</p>
             <ul className="ing-list">
               {recipe.ingredients.map((ing, i) => (
-                <li key={i}>{ing}</li>
+                <li key={i}>{renderText(ing)}</li>
               ))}
             </ul>
           </div>
@@ -193,7 +194,7 @@ export default async function RecipePage({
             <p className="col-lbl">Method</p>
             <ol className="method-list">
               {recipe.method.map((step, i) => (
-                <li key={i}><span>{step}</span></li>
+                <li key={i}><span>{renderText(step)}</span></li>
               ))}
             </ol>
           </div>
@@ -206,7 +207,7 @@ export default async function RecipePage({
           <>
             <div className="section-sep">Notes</div>
             {recipe.notes.map((note, i) => (
-              <p key={i}>{note}</p>
+              <p key={i}>{renderText(note)}</p>
             ))}
           </>
         )}
@@ -216,7 +217,7 @@ export default async function RecipePage({
           <>
             <div className="section-sep">The Singapore Version</div>
             {recipe.sgVersion.map((note, i) => (
-              <p key={i}>{note}</p>
+              <p key={i}>{renderText(note)}</p>
             ))}
           </>
         )}
@@ -226,7 +227,7 @@ export default async function RecipePage({
           <>
             <div className="section-sep">Why It Works</div>
             {recipe.whyItWorks.map((para, i) => (
-              <p key={i}>{para}</p>
+              <p key={i}>{renderText(para)}</p>
             ))}
           </>
         )}
@@ -245,7 +246,7 @@ export default async function RecipePage({
           <>
             <div className="section-sep">How I Ate It</div>
             {recipe.howIAteIt.map((para, i) => (
-              <p key={i}>{para}</p>
+              <p key={i}>{renderText(para)}</p>
             ))}
           </>
         )}
@@ -255,7 +256,7 @@ export default async function RecipePage({
           <>
             <div className="section-sep">{"What I'd Do Differently"}</div>
             {recipe.whatIDoDifferently.map((para, i) => (
-              <p key={i}>{para}</p>
+              <p key={i}>{renderText(para)}</p>
             ))}
           </>
         )}

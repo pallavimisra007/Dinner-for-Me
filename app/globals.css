@@ -673,6 +673,8 @@ body {
 .see-also { margin-top: 28px; font-family: var(--sans); font-size: 13px; color: rgba(26,26,26,0.6); }
 .see-also a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(26,26,26,0.3); }
 .see-also a:hover { text-decoration-color: var(--red); color: var(--red); }
+.inline-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(26,26,26,0.35); text-underline-offset: 2px; transition: color 0.15s, text-decoration-color 0.15s; }
+.inline-link:hover { color: var(--red); text-decoration-color: var(--red); }
 .recipe-cols {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
